@@ -1,0 +1,26 @@
+[package]
+name = "caf"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT"
+description = "Cross-platform keep-awake, lid-closed, dark-screen, and timer CLI with adaptive terminal art"
+repository = "https://github.com/ethvor/caf"
+readme = "README.md"
+keywords = ["caffeinate", "sleep", "power", "terminal", "cli"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.29"
+dirs = "6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true

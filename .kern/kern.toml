@@ -1,0 +1,6 @@
+project = "caf"
+harness_files = [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+]
