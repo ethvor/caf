@@ -297,7 +297,11 @@ pub fn cmd_status(as_json: bool) -> Result<()> {
         Some(st) => {
             let (is_dark_now, dark_in_str) = dark_display_state(&st, now);
             let mut flags = Vec::new();
-            flags.push(if st.lid { "lid-closed" } else { "no-lid" });
+            flags.push(if st.lid {
+                "lid-close safe"
+            } else {
+                "lid-open only"
+            });
             if is_dark_now {
                 flags.push("dark");
             }

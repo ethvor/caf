@@ -17,12 +17,12 @@
 ## Usage
 
 ```bash
-caf                                  # keep awake (lid-closed) with live animation
+caf                                  # keep awake (lid-close safe) with live animation
 caf 2h                               # keep awake for 2 hours (bare number = minutes: `caf 90`)
 caf 2h --dark                        # awake 2h, put display to sleep immediately
 caf --dark-in 10m                    # awake indefinitely, display sleeps after 10m
 caf 2h --dark-in 10m -r "agent run"  # awake 2h, display sleeps after 10m, with a reason label
-caf --no-lid                         # open-lid keep-awake only (skips pmset/sudo)
+caf --no-lid                         # lid-open only keep-awake (skips pmset/sudo)
 caf status                           # plain-text status (`--json` supported)
 caf logo --animate                   # interactive mug (`--gallery`, `--list`, alias `caf art`)
 decaf                                # turn off and restore normal sleep (or `caf off`)

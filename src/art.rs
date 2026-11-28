@@ -957,7 +957,7 @@ fn build_meta_line(
     let mut parts: Vec<String> = Vec::new();
     if active {
         if !lid {
-            parts.push("no-lid".to_string());
+            parts.push("lid-open only".to_string());
         }
         if dark {
             parts.push("dark".to_string());
@@ -978,7 +978,7 @@ fn build_meta_line(
         parts.push(r.trim().to_string());
     }
     if active && parts.is_empty() {
-        parts.push("lid-closed".to_string());
+        parts.push("lid-close safe".to_string());
     }
     parts.join(" · ")
 }

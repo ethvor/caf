@@ -84,7 +84,7 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-    /// Turn keep-awake ON (lid-closed by default; same as bare `caf`)
+    /// Turn keep-awake ON (lid-close safe by default; same as bare `caf`)
     On {
         duration: Option<String>,
         #[arg(long)]
